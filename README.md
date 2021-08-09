@@ -25,7 +25,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 - Node.js
 ### Setup
-- clone the Repo: coming soon
+- clone the Repo: https://github.com/RokoVarano/math-magicians.git
 ### Install
 - 
 - In the cloned project folder, run 'npm run start'
