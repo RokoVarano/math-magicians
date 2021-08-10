@@ -5,17 +5,18 @@ const Calculator = () => {
   const buttons = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
 
   return (
-    <section className="mainframe">
+    <main className="mainframe">
       <p className="result">0</p>
       {buttons.map((text) => <Button content={text} key={`btn-${text}`} />)}
-    </section>
+    </main>
   );
 };
 
 const Button = ({ content }) => {
   const classy = content === '0' ? 'btn0' : 'btn';
+  const orange = ['÷', 'x', '+', '-', '='].includes(content) ? ' orange' : '';
 
-  return <p className={classy}>{content}</p>;
+  return <p className={classy + orange}>{content}</p>;
 };
 
 Button.propTypes = {
