@@ -9,10 +9,10 @@ class Calculator extends Component {
 
   render() {
     return (
-      <main className="mainframe">
+      <section className="mainframe">
         <p className="result">0</p>
         {this.buttons.map((text) => <Button content={text} key={`btn-${text}`} />)}
-      </main>
+      </section>
     );
   }
 }
