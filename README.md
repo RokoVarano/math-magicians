@@ -6,6 +6,10 @@
 
 Make simple calculations.
 Read a random math-related quote.
+
+## Screenshot
+
+![](./app_screenshot.png)
 ## Built With
 
 - React
@@ -30,11 +34,14 @@ To get a local copy up and running follow these simple example steps.
 - 
 - In the cloned project folder, run 'npm run start'
 ### Usage
-- coming soon
+- click on a number button, then on an operation to get the result displayed on the grey bar.
+- click on A/C to clear all operations.
 ### Run tests
 - No tests yet
 ## I learned:
 - how to setup a react project using create-react-app
+- how to use states and props to pass information between components
+- how to handle onClick events
 ## Authors
 
 👤 **Rodrigo Ibaceta**
