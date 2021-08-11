@@ -10,19 +10,23 @@ class Button extends Component {
   }
 
   render() {
-    const { content } = this.props;
+    const { content, click } = this.props;
     return (
-      <p className={this.classy + this.orange}>{ content }</p>
+      <button type="button" onClick={click} className={this.classy + this.orange}>
+        { content }
+      </button>
     );
   }
 }
 
 Button.propTypes = {
   content: PropTypes.string,
+  click: PropTypes.func,
 };
 
 Button.defaultProps = {
   content: '',
+  click: {},
 };
 
 export default Button;
