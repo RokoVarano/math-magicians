@@ -1,41 +1,31 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
 import calculate from '../logic/calculate';
 
-class Calculator extends Component {
-  constructor() {
-    super();
-    this.buttons = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
-    this.state = {
-      total: '0',
-      next: null,
-      operation: null,
-    };
-  }
+const Calculator = () => {
+  const buttons = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
 
-  onClickBtn = (obj, text) => {
+  const [total, setTotal] = useState('0');
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
+
+  const onClickBtn = (obj, text) => {
+    console.log(obj);
+
     const newobj = calculate(obj, text);
-    if (newobj.total === null) newobj.total = '0';
-    this.setState(newobj);
-  }
+    if (newobj.total !== undefined) setTotal(newobj.total);
+    if (newobj.next !== undefined) setNext(newobj.next);
+    if (newobj.operation !== undefined) setOperation(newobj.operation);
+  };
 
-  updateDisplay = () => {
-    const { total } = this.state;
-    const { next } = this.state;
+  const updateDisplay = () => (next === null ? total : next);
 
-    if (next === null) return total;
-
-    return next;
-  }
-
-  render() {
-    return (
-      <section className="mainframe">
-        <p className="result">{ this.updateDisplay() }</p>
-        {this.buttons.map((text) => <Button content={text} key={`btn-${text}`} click={() => this.onClickBtn(this.state, text)} />)}
-      </section>
-    );
-  }
-}
+  return (
+    <section className="mainframe">
+      <p className="result">{ updateDisplay() }</p>
+      {buttons.map((text) => <Button content={text} key={`btn-${text}`} click={() => onClickBtn({ total, next, operation }, text)} />)}
+    </section>
+  );
+};
 
 export default Calculator;
