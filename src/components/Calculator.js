@@ -10,8 +10,6 @@ const Calculator = () => {
   const [operation, setOperation] = useState(null);
 
   const onClickBtn = (obj, text) => {
-    console.log(obj);
-
     const newobj = calculate(obj, text);
     if (newobj.total !== undefined) setTotal(newobj.total);
     if (newobj.next !== undefined) setNext(newobj.next);
