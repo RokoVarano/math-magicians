@@ -13,18 +13,26 @@ class Calculator extends Component {
     };
   }
 
-  onClickButton = (obj, text) => {
+  onClickBtn = (obj, text) => {
     const newobj = calculate(obj, text);
     if (newobj.total === null) newobj.total = '0';
     this.setState(newobj);
   }
 
-  render() {
+  updateDisplay = () => {
     const { total } = this.state;
+    const { next } = this.state;
+
+    if (next === null) return total;
+
+    return next;
+  }
+
+  render() {
     return (
       <section className="mainframe">
-        <p className="result">{ total }</p>
-        {this.buttons.map((text) => <Button content={text} key={`btn-${text}`} click={() => this.onClickButton(this.state, text)} />)}
+        <p className="result">{ this.updateDisplay() }</p>
+        {this.buttons.map((text) => <Button content={text} key={`btn-${text}`} click={() => this.onClickBtn(this.state, text)} />)}
       </section>
     );
   }
