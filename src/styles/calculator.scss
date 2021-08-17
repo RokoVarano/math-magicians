@@ -1,4 +1,14 @@
-.mainframe {
+.calculator-page,
+.calculator-title {
+  align-items: flex-start;
+}
+
+.calculator-title {
+  width: auto;
+  padding: 0 5rem;
+}
+
+.calculator-calc {
   display: grid;
   width: auto;
   height: auto;

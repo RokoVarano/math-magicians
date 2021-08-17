@@ -18,10 +18,14 @@ const Calculator = () => {
 
   const updateDisplay = () => (next === null ? total : next);
 
+  const title = 'Let\'s do some math!';
   return (
-    <section className="mainframe">
-      <p className="result">{ updateDisplay() }</p>
-      {buttons.map((text) => <Button content={text} key={`btn-${text}`} click={() => onClickBtn({ total, next, operation }, text)} />)}
+    <section className="calculator-page">
+      <h2 className="calculator-title">{title}</h2>
+      <article className="calculator-calc">
+        <p className="result">{ updateDisplay() }</p>
+        {buttons.map((text) => <Button content={text} key={`btn-${text}`} click={() => onClickBtn({ total, next, operation }, text)} />)}
+      </article>
     </section>
   );
 };
