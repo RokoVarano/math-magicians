@@ -13,6 +13,7 @@ Read a random math-related quote.
 ## Built With
 
 - React
+- SCSS
 
 ## Live Demo
 
@@ -34,6 +35,7 @@ To get a local copy up and running follow these simple example steps.
 - 
 - In the cloned project folder, run 'npm run start'
 ### Usage
+- click on the buttons on the top to access each section.
 - click on a number button, then on an operation to get the result displayed on the grey bar.
 - click on A/C to clear all operations.
 ### Run tests
@@ -43,6 +45,7 @@ To get a local copy up and running follow these simple example steps.
 - how to use states and props to pass information between components
 - how to handle onClick events
 - how to use hooks and function components
+- how to use Router to create links in React that change the URL
 ## Authors
 
 👤 **Rodrigo Ibaceta**
