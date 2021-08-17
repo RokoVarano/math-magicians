@@ -15,16 +15,18 @@
   max-width: 500px;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
+  box-shadow: 0.2rem 0.2rem;
 
   .btn {
     height: 5rem;
     width: 7rem;
     border: 1px $result-bg solid;
     box-sizing: border-box;
+    background: $result-color;
   }
 
   .orange {
-    background-color: $right-bg;
+    background: $right-bg;
   }
 
   .result {

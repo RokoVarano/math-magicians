@@ -1,11 +1,20 @@
 ul,
 nav {
   justify-content: space-evenly;
+  background: $result-bg;
 }
 
 nav {
   height: auto;
   margin-bottom: 2rem;
+  padding: 1rem;
+
+  li {
+    background: linear-gradient(180deg, $right-bg, 90%, $p-color);
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    box-shadow: 0.2rem 0.2rem;
+  }
 }
 
 .main-title {
