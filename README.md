@@ -42,6 +42,7 @@ To get a local copy up and running follow these simple example steps.
 - how to setup a react project using create-react-app
 - how to use states and props to pass information between components
 - how to handle onClick events
+- how to use hooks and function components
 ## Authors
 
 👤 **Rodrigo Ibaceta**
