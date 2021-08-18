@@ -28,7 +28,5 @@ describe('Render calculator and update the display with numbers', () => {
     fireEvent.click(screen.queryByText('='))
 
     expect(screen.getByText('27')).toBeInTheDocument();
-
-    screen.debug();
   })
 });
