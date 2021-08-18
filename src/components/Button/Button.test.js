@@ -19,11 +19,6 @@ describe('<Button />', () => {
     expect(getByTestId('button')).toHaveTextContent('1');
   });
 
-  test('should render correctly', () => {
-    const { getByTestId } = render(<Button content="3" click={() => click()} />, div);
-    expect(getByTestId('button')).toHaveTextContent('3');
-  });
-
   test('should match snapshot', () => {
     const tree = renderer.create(<Button content="hi" click={() => click()} />).toJSON;
     expect(tree).toMatchSnapshot();
