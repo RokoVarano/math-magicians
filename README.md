@@ -17,7 +17,8 @@ Read a random math-related quote.
 
 ## Live Demo
 
-coming soon
+[Heroku](https://math-magicians-rokovarano.herokuapp.com/calculator)
+[Netlify](https://6123dc6f47f0e900ef92f8ee--sleepy-spence-ad1d64.netlify.app/)
 
 ## Getting Started
 
