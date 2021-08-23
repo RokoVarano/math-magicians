@@ -39,13 +39,15 @@ To get a local copy up and running follow these simple example steps.
 - click on a number button, then on an operation to get the result displayed on the grey bar.
 - click on A/C to clear all operations.
 ### Run tests
-- No tests yet
+- in terminal, type 'npm run test'
 ## I learned:
 - how to setup a react project using create-react-app
 - how to use states and props to pass information between components
 - how to handle onClick events
 - how to use hooks and function components
 - how to use Router to create links in React that change the URL
+- how to create tests for React components
+- how to use snapshots to test React components
 ## Authors
 
 👤 **Rodrigo Ibaceta**
